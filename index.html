@@ -15,9 +15,7 @@
             height:90vh;
             width:100%;
             background-image:url('./bg-cri.png') ;
-            background-repeat:no-repeat;
-            
-            
+            background-repeat:no-repeat;   
         }
         main{
             background-color:blueviolet;
@@ -29,11 +27,9 @@
             width:40%;
             height:50%;
             border-radius:20px;
-
-
         }
         h1{
-            font-size:2rem;
+            font-size:1.5rem;
         }
         h2{
             font-size: 2.5rem;
@@ -50,13 +46,11 @@
         }
         #increament-btn:hover{
             border:1px solid gold;
-            box-shadow: 1px 1px 1px 1px gold;
-            
+            box-shadow: 1px 1px 1px 1px gold;  
         }
         #decreament-btn:hover{
             border:1px solid red;
-            box-shadow: 1px 1px 1px 1px rgba(255, 0, 0, 0.764);
-            
+            box-shadow: 1px 1px 1px 1px rgba(255, 0, 0, 0.764);  
         }
         #decreament-btn{
             background-color:red;
@@ -68,8 +62,19 @@
             font-size:1rem;
         }
         @media(max-width:700px){
+            main{
+            background-color:blueviolet;
+            color:black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width:90%;
+            height:50%;
+            border-radius:20px;
+        }
             h1{
-                font-size: 1.5rem;
+                font-size: 1.2rem;
             }
             #increament-btn{
             background-color:green;
@@ -79,14 +84,15 @@
             border:none;
             box-shadow: 1px 1px 1px 1px black;
         }
-        #decreament-btn{
-            background-color:red;
-            width:50%;
-            height:8%;
-            border-radius: 15px;
-            border:none;
-            box-shadow: 1px 1px 1px 1px black;
-        }
+            #decreament-btn{
+                background-color:red;
+                width:50%;
+                height:8%;
+                border-radius: 15px;
+                border:none;
+                box-shadow: 1px 1px 1px 1px black;
+                
+            }
 
         }
     </style>
@@ -95,15 +101,11 @@
     <main>
         <h1>Cricket Over Counter</h1>
         <h2 id="count-in">0</h2>
-        
         <button id="increament-btn" onclick="increament()">Add</button><br>
         <button id="decreament-btn" onclick="decreament()">Less</button>
 
-
     </main>
-    
     <script>
-        
         let countNum=document.getElementById('count-in');
         let count=0;
         var over=0;
@@ -116,22 +118,14 @@
                 over+=1;
                 alert(over+" Over is completed.");
             }
-
-
         }
         function decreament(){
             if(count>0){
                 count-=1;
                 countNum.innerText=count;
-
-            }
-            
+            } 
         }
-        
-        
-        
-            
-        
+
     </script>
 </body>
 </html>
